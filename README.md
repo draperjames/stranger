@@ -1,14 +1,13 @@
 # Stranger
 
-A native Schwung audio effect for Ableton Move, adapted from James Draper's
-Visitor JUCE project and inspired by OBNE's parallel multi-modulator.
+A native parallel modulation effect for Schwung on Ableton Move.
 Primary tremolo, chorus or phaser runs alongside a secondary tremolo or chorus.
 One Secondary control changes the second voice's level, rate, depth and delay;
 Regen feeds both voices back into both inputs.
 
 Module ID, C implementation, binary, package and Beads issue prefix all use
 **stranger**. Independent project; no OBNE/Ableton affiliation or claim of an
-exact pedal emulation. See [provenance](docs/PROVENANCE.md).
+exact pedal emulation.
 
 ## First test on Move
 
