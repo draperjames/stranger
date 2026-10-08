@@ -1,0 +1,21 @@
+name: Validate Stranger
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: DSP and manifest tests
+        run: make test
+      - name: Memory and undefined behavior checks
+        run: make sanitize
+      - name: Ensure generated metadata is current
+        run: git diff --exit-code -- src/metadata.h
+      - name: ARM64 build and package
+        run: ./scripts/build.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stranger-module
+          path: dist/stranger-module.tar.gz

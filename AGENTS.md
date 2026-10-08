@@ -3,7 +3,7 @@
 This project uses **bd** (beads) for issue tracking. Run `bd prime` for full workflow context.
 
 > **Architecture in one line:** Issues live in a local Dolt database
-> (`.beads/dolt/`); cross-machine sync uses `bd dolt push/pull` (a
+> (`.beads/embeddeddolt/`); cross-machine sync uses `bd dolt push/pull` (a
 > git-compatible protocol), stored under `refs/dolt/data` on your git
 > remote — separate from `refs/heads/*` where your code lives.
 > `.beads/issues.jsonl` is a passive export, not the wire protocol.
@@ -94,3 +94,11 @@ bd close <id>         # Complete work
 - NEVER say "ready to push when you are" - YOU must push
 - If push fails, resolve and retry until it succeeds
 <!-- END BEADS INTEGRATION -->
+
+## Stranger audio requirements
+
+- Keep all module IDs, shipped filenames and tracker prefixes under `stranger`.
+- Preserve input stereo separation, the output ceiling, finite parameter guards, and realtime callback constraints. Never use `-ffast-math` or `-Ofast`; those defeat non-finite validation.
+- Run `make test`, `make sanitize`, ARM64 packaging and the native offline Move tests before deployment when DSP changes. State, runtime metadata and manifest must agree.
+- Installation stages and verifies the module. Do not edit saved chains, select a new effect or restart the device merely to run offline DSP tests.
+- Distinguish native loading/DSP validation from human listening or physical-pedal comparison.

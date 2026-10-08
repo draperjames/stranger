@@ -1,0 +1,47 @@
+{
+  "title": "Stranger",
+  "children": [
+    {
+      "title": "Start here",
+      "lines": [
+        "Parallel modulation.",
+        "Start with volume low.",
+        "Regen starts at zero.",
+        "Output peak: -6 dBFS.",
+        "Knob 8 sets trim."
+      ]
+    },
+    {
+      "title": "Knobs 1-4",
+      "lines": [
+        "1 Rate: 0.1-10 Hz",
+        "2 Depth: primary",
+        "3 Secondary: level,",
+        "  rate, depth, delay",
+        "4 Regen: both voices",
+        "  feed both inputs"
+      ]
+    },
+    {
+      "title": "Knobs 5-8",
+      "lines": [
+        "5 Mix: dry/wet",
+        "6 Primary: tremolo,",
+        "  chorus or phaser",
+        "7 Secondary mode:",
+        "  tremolo or chorus",
+        "8 Output: 0-100%",
+        "  Default trim: 50%"
+      ]
+    },
+    {
+      "title": "About",
+      "lines": [
+        "Inspired by OBNE",
+        "Visitor. Independent",
+        "approximation, not a",
+        "measured pedal model."
+      ]
+    }
+  ]
+}
